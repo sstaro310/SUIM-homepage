@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>SUIM</title>
+  <meta name="description" content="aaa">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/SUIM_Final_Saido.png">
+  <link rel="stylesheet" href="css/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="top"></div>
+  <header id="header">
+    <div class="inner wrapper">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/SUIM_logo.png" alt="SUIM_logo">
+        </a>
+      </h1>
+      <button class="hamburger" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#top">HOME</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#research">RESEARCH</a></li>
+          <li><a href="#achievements">ACHIEVEMENTS</a></li>
+          <li><a href="#member">MEMBER</a></li>
+          <li><a href="#partners">PARTNERS</a></li>
+          <li><a href="#thesis">THESIS</a></li>
+          <li><a href="#logo">LOGO</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a class="contact" href="#">Inquiry</a>
+  </header>
+
+  <main>
+    <div id="mainvisual">
+      <img src="images/mainvisual.jpg" alt="メインビジュアル">
+    </div>
+
+    <section id="news" class="wrapper">
+      <h2 class="section-title">
+        <span class="en">NEWS</span>
+        <span class="ja">ニュース</span>
+      </h2>
+      <ul class="list">
+        <li>
+          <div class="date-area">
+            <time datetime="yyyy-mm-dd">yyyy.mm.dd</time>
+            <span>NEWS</span>
+          </div>
+          <p>Title</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <div class="img">
+        <img src="images/research.jpg" alt="研究内容画像">
+      </div>
+      <div class="text">
+        <h2 class="section-title">
+          <span class="en">RESEARCH</span>
+          <span class="ja">研究内容</span>
+        </h2>
+        <p>text</p>
+        <p>text</p>
+        <p>text</p>
+      </div>
+    </section>
+
+    <section id="achievements" class="wrapper">
+      <h2 class="section-title">
+        <span class="en">ACHIEVEMENTS</span>
+        <span class="ja">研究業績</span>
+      </h2>
+      <div class="flex">
+        <div class="left">
+          <div class="item">
+            <p class="title">実績その１</p>
+            <img src="images/achievments1.jpg" alt="実績1">
+          </div>
+          <div class="item">
+            <p class="title">実績その２</p>
+            <img src="images/achievments2.jpg" alt="実績2">
+          </div>
+        </div>
+        <div class="right">
+          <div class="item">
+            <p class="title">実績その３</p>
+            <img src="achievments3.jpg" alt="実績3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="member" class="wrapper">
+      <div class="text">
+        <h2 class="section-title">
+          <span class="en">MEMBER</span>
+          <span class="ja">メンバー</span>
+        </h2>
+        <dl class="info">
+          <dt>〇〇大学</dt>
+          <dd>名前・ステータスなど</dd>
+          <dt>〇〇大学</dt>
+          <dd>名前・ステータスなど</dd>
+          <dt>〇〇大学</dt>
+          <dd>名前・ステータスなど</dd>
+        </dl>
+      </div>
+      <div class="img">
+        <img src="images/member.jpg" alt="メンバー画像">
+      </div>
+    </section>
+
+    <section id="partners" class="wrapper">
+      <h2 class="section-title">
+        <span class="en">PARTNERS</span>
+        <span class="ja">共同企業</span>
+      </h2>
+      <p>共同企業の一覧や紹介文をここに記載します。</p>
+    </section>
+
+    <section id="thesis" class="wrapper">
+      <h2 class="section-title">
+        <span class="en">THESIS</span>
+        <span class="ja">学位論文</span>
+      </h2>
+      <p>学位論文の概要やリンク、発表者情報などをここに記載します。</p>
+    </section>
+
+    <section id="logo" class="wrapper">
+      <h2 class="section-title">
+        <span class="en">LOGO</span>
+        <span class="ja">ロゴの由来</span>
+      </h2>
+      <p>
+        文芸学部×理工学部　協働プロジェクト「SUIM」
+        <a href="https://www.kindai.ac.jp/rd/research-center/design-creative/news_topics_03.html" id="logo-link">こちら</a>
+      </p>
+      </p>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="wrapper">
+      <div class="flex">
+        <div class="logo">
+          <img src="images/SUIM_logo.png" alt="SUIM_logo">
+        </div>
+        <div class="info">
+          <p>
+            information etc<br>
+            information etc<br>
+            information etc
+          </p>
+        </div>
+      </div>
+      <p class="copyright">© SUIM</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ハンバーガーメニュー開閉
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const navList = document.querySelector("#header nav ul");
+
+      hamburgerBtn.addEventListener("click", () => {
+        hamburgerBtn.classList.toggle("active");
+        navList.classList.toggle("active");
+      });
+
+      // スムーススクロール
+      const links = document.querySelectorAll('a[href^=\"#\"]');
+      links.forEach(link => {
+        link.addEventListener("click", (e) => {
+          const href = link.getAttribute("href");
+          if (href !== "#" && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+              window.scrollTo({
+                top: top,
+                behavior: "smooth"
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
