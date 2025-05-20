@@ -12,6 +12,12 @@
 git clone git@github.com:sstaro310/SUIM-homepage.git
 ```
 
+### HTTPSの場合
+```
+git clone https://github.com/sstaro310/SUIM-homepage.git
+```
+
+
 1.	プロジェクトフォルダに移動します。
 
 ```
