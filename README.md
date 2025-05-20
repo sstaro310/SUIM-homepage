@@ -21,7 +21,7 @@ git clone https://github.com/sstaro310/SUIM-homepage.git
 1.	プロジェクトフォルダに移動します。
 
 ```
-cd ~/SUIM-homepage
+cd SUIM-homepage
 ```
 
 ブラウザで `index.html` を開いてホームページを確認できます。
